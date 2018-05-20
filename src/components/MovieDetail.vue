@@ -11,14 +11,14 @@
       <h2>Genres</h2>
       <div class="genres">
         <ul>
-          <li v-for="genre in movie.genres">{{ genre.name }}</li>
+          <li :key="genre.id" v-for="genre in movie.genres">{{ genre.name }}</li>
         </ul>
       </div>
       <div class="actors">
         <h2>Staring</h2>
 
         <ul>
-          <li v-for="credit in movie.credits.cast.splice(0, 2)">{{ credit.name }}</li>
+          <li :key="credit.id" v-for="credit in movie.credits.cast.splice(0, 2)">{{ credit.name }}</li>
         </ul>
       </div>
 
